@@ -1,0 +1,143 @@
+/* ================================
+   GLOBAL STYLES
+   ================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f3f3f3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+header nav {
+    background: #222;
+    padding: 12px 0;
+}
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav ul li a.active {
+    color: #00d4ff;
+}
+
+/* ================================
+   REVIEW GRID
+   ================================ */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 25px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* ================================
+   REVIEW CARD
+   ================================ */
+
+.review-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+
+
+
+/* ================================
+   CARD DETAILS
+   ================================ */
+
+.review-details {
+    padding: 15px 18px;
+}
+
+.review-details h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #222;
+}
+
+.review-details p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.review-details strong {
+    color: #000;
+}
+
+/* ================================
+   DEBUG PANEL (for development)
+   ================================ */
+
+#debug {
+    font-family: "Courier New", monospace;
+    font-size: 0.85rem;
+    background: #111;
+    color: #0f0;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* ================================
+   IMAGE (Uniform Size!)
+   ================================ */
+
+.review-image {
+    width: 100%;
+    height: 350px; /* For uniform sizing */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.review-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
