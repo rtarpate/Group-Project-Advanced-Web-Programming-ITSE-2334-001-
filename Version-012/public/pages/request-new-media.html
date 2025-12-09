@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request New Media - Star Media Reviews</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header>
+  <h1>Star Media Reviews</h1>
+  <nav>
+    <ul>
+      <a href="index.html">Home</a></li>
+      <a href="reviews.html">Reviews</a></li>
+      <a href="write-review.html">Write a Review</a></li>
+      <a href="request-new-media.html" class="active">Request New Media</a></li>
+    </ul>
+</header>
+
+<main>
+  <section class="form-section">
+    <h2>Request New Media</h2>
+    <form id="request-media-form">
+      <label for="media-name">Media Name:</label>
+      <input type="text" id="media-name" placeholder="Enter media name" required>
+
+      <label for="media-type">Media Type:</label>
+      <select id="media-type" required>
+        <option value="">-- Select Type --</option>
+        <option value="Movie">Movie</option>
+        <option value="TV">TV</option>
+        <option value="Video Game">Video Game</option>
+      </select>
+
+      <label for="media-description">Description:</label>
+      <textarea id="media-description" rows="5" placeholder="Enter short description..." required></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Star Media Reviews</p>
+</footer>
+</body>
+</html>

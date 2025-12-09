@@ -12,4 +12,7 @@
 [2025-11-24 04:46:45] ROUTER ERROR: Too few arguments to function StarStarMediaDatabase::getAllMediaWithRatings(), 0 passed in C:\xampp\htdocs\groupproject\Version-029\public\pages\router.php on line 23 and exactly 1 expected
 [2025-11-24 04:53:38] ROUTER ERROR: Too few arguments to function StarStarMediaDatabase::getAllMediaWithRatings(), 0 passed in C:\xampp\htdocs\groupproject\Version-029\public\pages\router.php on line 23 and exactly 1 expected
 [2025-11-24 22:44:54] Error inserting media in admin-add-media: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'image_path' cannot be null
+<<<<<<< HEAD
 [2025-12-07 22:56:01] ADMIN LOGIN ERROR: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+=======
+>>>>>>> 53e8f055b04e49196e1da8f1add1e4b98c285ebb

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request New Media - Star Media Reviews</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header>
+  <h1>Star Media Reviews</h1>
+  <nav>
+    <ul>
+      <a href="index.html">Home</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="write-review.html">Write a Review</a>
+      <a href="request-new-media.html" class="active">Request New Media</a>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="form-section">
+    <h2>Request New Media</h2>
+    <form id="request-media-form">
+      <label for="media-name">Media Name:</label>
+      <input type="text" id="media-name" name="media_name" placeholder="Enter media name" required>
+
+      <label for="media-type">Media Type:</label>
+      <select id="media-type" name="media_type" required>
+        <option value="">-- Select Type --</option>
+        <option value="Movie">Movie</option>
+        <option value="TV">TV</option>
+        <option value="Video Game">Video Game</option>
+      </select>
+
+      <label for="media-description">Description:</label>
+      <textarea id="media-description" name="media_description" rows="5" placeholder="Enter short description..." required></textarea>
+
+      <button type="submit">Submit Request</button>
+      <p id="form-message" style="display:none; color:green; margin-top:10px;"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Star Media Reviews</p>
+</footer>
+
+<script>
+// Basic JS form handler to submit via fetch and fade success message
+document.getElementById("request-media-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  const form = e.target;
+  const formData = new FormData(form);
+  const message = document.getElementById("form-message");
+  
+  try {
+    const response = await fetch("submit-new-media.php", {
+      method: "POST",
+      body: formData
+    });
+    const result = await response.text();
+    
+    if (result.trim() === "Success") {
+      message.textContent = "✅ Request submitted successfully!";
+      message.style.display = "block";
+      message.style.opacity = 1;
+      form.reset();
+
+      // Fade out after 3 seconds
+      setTimeout(() => {
+        message.style.transition = "opacity 1s ease";
+        message.style.opacity = 0;
+        setTimeout(() => message.style.display = "none", 1000);
+      }, 3000);
+    } else {
+      message.textContent = "⚠️ " + result;
+      message.style.display = "block";
+      message.style.color = "red";
+    }
+  } catch (error) {
+    message.textContent = "❌ Error submitting form.";
+    message.style.display = "block";
+    message.style.color = "red";
+  }
+});
+</script>
+</body>
+</html>
