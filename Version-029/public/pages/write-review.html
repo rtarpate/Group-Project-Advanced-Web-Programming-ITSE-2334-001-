@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Review</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Star Media Reviews</h1>
+    <nav>
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="write-review.html" class="active">Write a Review</a>
+            <a href="request-new-media.html">Request New Media</a>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Write a Review</h2>
+
+    <!-- MESSAGE BOX -->
+    <div id="review-form-message"></div>
+
+    <form id="write-review-form">
+
+        <label for="media_id">Media Title:</label>
+        <select id="media_id" name="media_id" required>
+            <option value="">-- Select Media --</option>
+        </select>
+
+        <label for="rating">Rating (0–10):</label>
+        <input type="number" id="rating" name="rating" min="0" max="10" required>
+
+        <label for="review_text">
+            Review:
+            <span id="review-optional" class="optional-text">(Optional)</span>
+        </label>
+        <textarea id="review_text" name="review_text" rows="5"></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+</div>
+
+<!-- FORM JS -->
+<script src="../assets/javascript/form-write-review.js"></script>
+
+<!-- Load media titles dynamically -->
+<script>
+// Populate dropdown with media titles
+fetch("router.php?action=getMedia")
+    .then(res => res.json())
+    .then(json => {
+        if (json.status === "success") {
+            const select = document.getElementById("media_id");
+            json.data.forEach(media => {
+                const opt = document.createElement("option");
+                opt.value = media.media_id;
+                opt.textContent = media.title;
+                select.appendChild(opt);
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,13 +1,20 @@
 <?php
+<<<<<<< HEAD
 // Correct path: admin-session.php is in the SAME folder
 require_once __DIR__ . '/admin-session.php';
 
 // Correct includes based on Version-035/036 folder layout
+=======
+require_once __DIR__ . '/admin-session.php';
+>>>>>>> 2e3b5184975ebb06bf30c0922ffe5f4e4bf70925
 require_once __DIR__ . '/../includes/DatabaseConnector.php';
 require_once __DIR__ . '/../includes/helper.php';
 require_once __DIR__ . '/../assets/logs/ErrorLogger.php';
 
+<<<<<<< HEAD
 // Redirect if already logged in
+=======
+>>>>>>> 2e3b5184975ebb06bf30c0922ffe5f4e4bf70925
 if (is_admin_logged_in()) {
     header('Location: admin-dashboard.php');
     exit;
@@ -23,7 +30,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'Please enter both username and password.';
     } else {
         $db = DatabaseConnector::getConnection();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2e3b5184975ebb06bf30c0922ffe5f4e4bf70925
         if (!$db) {
             $error = 'Database connection error.';
         } else {
@@ -33,9 +43,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt->execute([':name' => $username]);
                 $admin = $stmt->fetch();
 
+<<<<<<< HEAD
                 // Plain text password match (matches your SQL dump)
                 if ($admin && $admin['admin_password'] === $password) {
 
+=======
+                if ($admin && $admin['admin_password'] === $password) {
+                    // NOTE: For production, use password_hash/password_verify instead.
+>>>>>>> 2e3b5184975ebb06bf30c0922ffe5f4e4bf70925
                     $_SESSION['admin_id']   = $admin['admin_id'];
                     $_SESSION['admin_name'] = $admin['admin_name'];
 
@@ -58,11 +73,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Admin Login - Star Media Reviews</title>
+<<<<<<< HEAD
 
     <!-- Updated to correct Version-036 CSS paths -->
     <link rel="stylesheet" href="/groupproject/Version-036/assets/css/style.css">
     <link rel="stylesheet" href="/groupproject/Version-036/assets/css/admin-style.css">
 
+=======
+    <link rel="stylesheet" href="/groupproject/Version-035/assets/css/style.css">
+    <link rel="stylesheet" href="/groupproject/Version-035/assets/css/admin-style.css">
+>>>>>>> 2e3b5184975ebb06bf30c0922ffe5f4e4bf70925
 </head>
 <body class="admin-body">
 <div class="admin-wrapper">
@@ -75,7 +95,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <main class="admin-main">
         <section class="admin-panel">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2e3b5184975ebb06bf30c0922ffe5f4e4bf70925
             <?php if ($error): ?>
                 <div class="error-message"><?php echo htmlspecialchars($error); ?></div>
             <?php endif; ?>
@@ -91,10 +114,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
 
             <p class="return-link">
+<<<<<<< HEAD
                 <a href="/groupproject/Version-036/index.php"
                    style="text-decoration: none; color: #F4D47C; border-bottom: 1px solid transparent;"
                    onmouseover="this.style.borderBottomColor='#D4AF37';"
                    onmouseout="this.style.borderBottomColor='transparent';">
+=======
+                <a href="/groupproject/Version-035/public/index.php"
+                    style="text-decoration: none; color: #F4D47C; border-bottom: 1px solid transparent;"
+                    onmouseover="this.style.borderBottomColor='#D4AF37';"
+                    onmouseout="this.style.borderBottomColor='transparent';">
+>>>>>>> 2e3b5184975ebb06bf30c0922ffe5f4e4bf70925
                     &larr; Return to Website
                 </a>
             </p>
@@ -105,7 +135,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <footer class="admin-footer">
         <p>&copy; <?php echo date('Y'); ?> Star Media Review — Admin Panel</p>
     </footer>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2e3b5184975ebb06bf30c0922ffe5f4e4bf70925
 </div>
 </body>
 </html>

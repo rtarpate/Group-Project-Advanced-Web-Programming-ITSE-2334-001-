@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request New Media</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Star Media Reviews</h1>
+    <nav>
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="write-review.html">Write a Review</a>
+            <a href="request-new-media.html" class="active">Request New Media</a>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Request New Media to Be Added</h2>
+
+    <!-- MESSAGE BOX -->
+    <div id="form-message"></div>
+
+    <form id="new-media-form">
+
+        <label for="media_name">Media Name:</label>
+        <input type="text" id="media_name" name="media_name" required>
+
+        <label for="media_type">Media Type:</label>
+        <select id="media_type" name="media_type" required>
+            <option value="">-- Select Media Type --</option>
+            <option value="movie">Movie</option>
+            <option value="tv_show">TV Show</option>
+            <option value="video_game">Video Game</option>
+            <option value="comic_book">Comic Book</option>
+            <option value="manga">Manga</option>
+            <option value="novel">Novel</option>
+            <option value="web_novel">Web Novel</option>
+            <option value="web_series">Web Series</option>
+            <option value="audio_book">Audio Book</option>
+        </select>
+
+        <label for="media_description">Why Should This Be Added?</label>
+        <textarea id="media_description" name="media_description" rows="5" required></textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
+</div>
+
+<!-- FORM JS -->
+<script src="../assets/javascript/form-request-new-media.js"></script>
+
+</body>
+</html>

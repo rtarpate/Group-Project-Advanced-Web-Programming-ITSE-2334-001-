@@ -1,0 +1,544 @@
+body {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #f9f4ef;
+  color: #333;
+}
+
+header {
+  background-color: #2b2b2b;
+  color: #f9d77e;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Copperplate', 'Futura', sans-serif;
+  letter-spacing: 2px;
+}
+
+/*
+title {
+  color: #f9d77e;
+}
+*/
+nav a {
+  margin: 0 15px;
+  color: #f9d77e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* active link helper */
+nav a.active {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border: 4px double #f9d77e;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  font-family: 'Copperplate', 'Futura', sans-serif;
+  text-align: center;
+  color: #f9d77e;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #2b2b2b;
+  color: #f9d77e;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.review {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.star {
+  color: #f9d77e;
+  font-size: 20px;
+}
+
+
+/* === Reviews Page Grid & Search Section (original) === */
+
+.search-filter {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-container input,
+.search-container select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* base grid used by both old and new layouts */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.reviews-grid .review-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reviews-grid .review-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reviews-grid .review-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.reviews-grid .review-item h3 {
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.reviews-grid .review-item p {
+  font-size: 0.95rem;
+  margin: 0 10px 15px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .reviews-grid {
+    padding: 20px;
+  }
+}
+
+
+/* === Art Deco Styled Search/Filter Bar (Centered) === */
+.artdeco-search {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: var(--background-color, #f9f9f9);
+  border: 2px solid var(--accent-color, #c9a86a);
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.artdeco-search .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.artdeco-search input,
+.artdeco-search select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid var(--accent-color, #c9a86a);
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.artdeco-search input:disabled,
+.artdeco-search select:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.artdeco-search input:hover,
+.artdeco-search select:hover {
+  border-color: #b68d4c;
+}
+
+.artdeco-search input::placeholder {
+  color: #777;
+  font-style: italic;
+}
+
+.artdeco-search::before,
+.artdeco-search::after {
+  content: "";
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+  border-top: 2px solid var(--accent-color, #c9a86a);
+}
+
+@media (max-width: 768px) {
+  .artdeco-search {
+    width: 95%;
+    padding: 15px;
+  }
+  .artdeco-search .search-container {
+    flex-direction: column;
+  }
+}
+
+
+/* === Uniform Poster Styling for OLD static reviews === */
+.review img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.section-header {
+  text-align: center;
+  color: #f9d77e;
+  font-family: 'Copperplate', 'Futura', sans-serif;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  border-bottom: 3px double #f9d77e;
+  padding-bottom: 5px;
+}
+
+.review h3 {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+  color: #333;
+}
+
+
+/* ============================= */
+/* Form Validation Message Styles */
+/* ============================= */
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.success-message {
+  color: #2ecc71;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: left;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional improvement for invalid input borders */
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border-color: #e74c3c;
+  background-color: #fff5f5;
+}
+
+input:valid,
+textarea:valid,
+select:valid {
+  border-color: #2ecc71;
+  background-color: #f6fff9;
+}
+
+/* Optional field indicator */
+.optional-text {
+  color: #ccc;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-left: 4px;
+}
+
+/* Make sure optional textarea looks neutral like "Type:" field */
+#review-text {
+  border: 1px solid #ccc; /* neutral gray */
+  background-color: #fff;
+}
+
+#review-text:focus {
+  border-color: #999;
+}
+
+/* ========================================= */
+/* NEW: Dynamic Reviews Layout (cards + posters) */
+/* ========================================= */
+
+/* Grid already defined above; we just reuse it */
+
+/* Card used by the JS-generated reviews */
+.review-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border: 3px double #f9d77e;          /* Art Deco frame */
+  transition: transform 0.15s ease,
+              box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Poster container – forces UNIFORM SIZE */
+.review-image {
+  width: 100%;
+  height: 350px; /* same height for all posters */
+  overflow: hidden;
+  background-color: #000;
+}
+
+.review-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Card text */
+.review-details {
+  padding: 15px 18px;
+}
+
+.review-details h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #2b2b2b;
+  font-family: 'Copperplate', 'Futura', sans-serif;
+}
+
+.review-details p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.review-details strong {
+  color: #000;
+}
+
+
+/* ============================= */
+/* STAR RATING VISUALS (0–10)    */
+/* ============================= */
+
+.stars {
+  margin: 8px 0;
+  text-align: left;
+}
+
+.star {
+  font-size: 22px;
+  margin-right: 2px;
+}
+
+/* Full star */
+.star.full {
+  color: #f9d77e;
+}
+
+/* Half star (gold but faded) */
+.star.half {
+  color: #f9d77ee0; /* light gold transparency */
+  position: relative;
+}
+
+/* Optional half-star overlay look (better visual) */
+.star.half::after {
+  content: "☆";
+  color: #444;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+/* Empty star */
+.star.empty {
+  color: #444;
+}
+
+/* ============================= */
+/* Search + Sort Controls        */
+/* ============================= */
+
+.search-controls {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f4f4f4;
+  border: 2px solid #c9a86a;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#search-input,
+#sort-select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 2px solid #c9a86a;
+  border-radius: 6px;
+  background: white;
+  width: 250px;
+}
+
+/* ===================== */
+/* MEDIA DETAILS PAGE    */
+/* ===================== */
+
+.media-details-container {
+  width: 90%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #c9a86a;
+  border-radius: 10px;
+}
+
+.media-header {
+  display: flex;
+  gap: 20px;
+}
+
+.media-header img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #c9a86a;
+}
+
+.review-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.more-info-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #c9a86a;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.more-info-btn:hover {
+  background: #b38f55;
+}
+
+#type-filter {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 2px solid #c9a86a;
+    border-radius: 6px;
+    background: white;
+    width: 250px;
+}
+
+
+/* Optional improvements (compatible with your Art Deco style) */
+
+.search-controls {
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-container input,
+.search-container select {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+/* Make the reviews grid layout consistent */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Card layout stays exactly as in your CSS */
+.review-card {
+    background: var(--card-bg, #111);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.review-card img {
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 6px;
+}

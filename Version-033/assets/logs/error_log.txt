@@ -1,0 +1,42 @@
+[2025-11-24 03:40:24] GET MEDIA WITH RATINGS ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.genre' in 'field list'
+[2025-11-24 03:40:25] GET MEDIA WITH RATINGS ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.genre' in 'field list'
+[2025-11-24 03:40:27] GET MEDIA WITH RATINGS ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.genre' in 'field list'
+[2025-11-24 03:40:28] GET MEDIA WITH RATINGS ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.genre' in 'field list'
+[2025-11-24 03:42:31] GET MEDIA WITH RATINGS ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.genre' in 'field list'
+[2025-11-24 03:42:32] GET MEDIA WITH RATINGS ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.genre' in 'field list'
+[2025-11-24 04:09:51] GET MEDIA WITH RATINGS ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.genre' in 'field list'
+[2025-11-24 04:09:52] GET MEDIA WITH RATINGS ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.genre' in 'field list'
+[2025-11-24 04:27:09] GET MEDIA WITH RATINGS ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.genre' in 'field list'
+[2025-11-24 04:33:23] ROUTER ERROR: Too few arguments to function StarStarMediaDatabase::getAllMediaWithRatings(), 0 passed in C:\xampp\htdocs\groupproject\Version-029\public\pages\router.php on line 23 and exactly 1 expected
+[2025-11-24 04:36:08] ROUTER ERROR: Too few arguments to function StarStarMediaDatabase::getAllMediaWithRatings(), 0 passed in C:\xampp\htdocs\groupproject\Version-029\public\pages\router.php on line 23 and exactly 1 expected
+[2025-11-24 04:46:45] ROUTER ERROR: Too few arguments to function StarStarMediaDatabase::getAllMediaWithRatings(), 0 passed in C:\xampp\htdocs\groupproject\Version-029\public\pages\router.php on line 23 and exactly 1 expected
+[2025-11-24 04:53:38] ROUTER ERROR: Too few arguments to function StarStarMediaDatabase::getAllMediaWithRatings(), 0 passed in C:\xampp\htdocs\groupproject\Version-029\public\pages\router.php on line 23 and exactly 1 expected
+[2025-11-24 22:44:54] Error inserting media in admin-add-media: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'image_path' cannot be null
+[2025-12-07 22:56:01] ADMIN LOGIN ERROR: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[2025-12-08 01:19:24] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:19:28] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:19:33] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:20:54] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:20:56] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:22:02] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:22:04] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:22:05] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:24:54] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:31:56] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:32:02] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:32:03] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:32:20] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:32:20] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:32:21] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:32:22] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:32:24] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:38:51] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:43:28] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:43:28] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:43:29] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:43:30] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:43:31] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:43:31] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:43:59] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:43:59] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
+[2025-12-08 01:44:01] GET ALL MEDIA ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'starstarmediareviewdatabase.average_reviews' doesn't exist
