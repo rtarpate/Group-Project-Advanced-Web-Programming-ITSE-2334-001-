@@ -1,0 +1,96 @@
+/* ---------------------------------------------------------
+   Request New Media – Form Styling (Version-035)
+   --------------------------------------------------------- */
+
+.request-container {
+    width: 70%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff8ee;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.request-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.request-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.request-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+.request-form label {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* Text Input and Textarea */
+.request-form input,
+.request-form select,
+.request-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d4c7a6;
+    background-color: #fffef9;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Textarea height */
+.request-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit Button */
+.request-submit-btn {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(to right, #d4a64a, #f0d68a);
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.request-submit-btn:hover {
+    background: linear-gradient(to right, #f0d68a, #d4a64a);
+}
+
+/* Success & Error Messages */
+.success-message,
+.error-message {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.success-message {
+    background: #e3ffe3;
+    border: 1px solid #78c878;
+    color: #1b6e1b;
+}
+
+.error-message {
+    background: #ffe1e1;
+    border: 1px solid #e98484;
+    color: #8f1d1d;
+}
