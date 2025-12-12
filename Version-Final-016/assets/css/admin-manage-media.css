@@ -1,0 +1,115 @@
+/* ===========================================================
+   MANAGE MEDIA — RESPONSIVE HYBRID LAYOUT (Option C)
+   =========================================================== */
+
+/* --- Desktop Table --- */
+
+.manage-media-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.manage-media-table th,
+.manage-media-table td {
+    padding: 10px;
+    border-bottom: 1px solid #3a3a40;
+    white-space: nowrap;
+}
+
+.manage-media-table img {
+    width: 70px !important;
+    height: 100px !important;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Inputs inside table */
+.manage-media-table input[type="text"],
+.manage-media-table input[type="date"],
+.manage-media-table select,
+.manage-media-table input[type="file"] {
+    width: 100%;
+    max-width: 180px;
+    min-width: 100px;
+    box-sizing: border-box;
+}
+
+/* Keep table responsive */
+.responsive-table-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* ===========================================================
+   MOBILE & TABLET RESPONSIVE CARD VIEW (< 900px)
+   =========================================================== */
+
+@media (max-width: 900px) {
+
+    /* Hide table headers */
+    .manage-media-table thead {
+        display: none;
+    }
+
+    /* Each row becomes a card */
+    .manage-media-table tr {
+        display: block;
+        background: #1c1c21;
+        border: 1px solid #b89441;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 12px;
+    }
+
+    /* Cells become full-width rows */
+    .manage-media-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: normal;
+        padding: 8px 0;
+        border: none;
+    }
+
+    /* Left side label */
+    .manage-media-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #e6c465;
+        flex-basis: 40%;
+        text-align: left;
+    }
+
+    /* Inputs expand fully */
+    .manage-media-table input[type="text"],
+    .manage-media-table input[type="date"],
+    .manage-media-table select,
+    .manage-media-table input[type="file"] {
+        max-width: none;
+        width: 100%;
+    }
+
+    /* Image becomes centered and larger */
+    .manage-media-table img {
+        width: 120px !important;
+        height: 170px !important;
+        margin: 0 auto 12px auto;
+        display: block;
+        border-radius: 6px;
+    }
+
+    /* Button styles */
+    .table-action-btn {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        border-radius: 8px;
+    }
+
+    .table-delete-btn {
+        background: #8a2020;
+    }
+}

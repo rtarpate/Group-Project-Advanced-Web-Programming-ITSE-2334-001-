@@ -1,0 +1,375 @@
+/* ===========================================================
+   GLOBAL ADMIN STYLE — GOLD & BLACK ART DECO THEME
+   =========================================================== */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #1b1b22, #0b0b0d);
+    color: #ffffff;
+}
+
+/* ===========================================================
+   TOP NAVIGATION BAR
+   =========================================================== */
+
+.admin-nav {
+    width: 100%;
+    background: #1c1c21;
+    border-bottom: 1px solid #b89441;
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.admin-nav a {
+    color: #e6c465;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.admin-nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 6px #d4b15a;
+}
+
+/* ===========================================================
+   PAGE TITLES
+   =========================================================== */
+
+.admin-title {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: #e6c465;
+}
+
+.admin-subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #d9caa2;
+}
+
+/* ===========================================================
+   CONTENT WRAPPER
+   =========================================================== */
+
+.admin-content {
+    width: 90%;
+    max-width: 1400px;
+    margin: 30px auto;
+}
+
+/* Gold-bordered content panels */
+.admin-panel {
+    background: #1c1c21;
+    border: 1px solid #b89441;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 14px rgba(255, 215, 0, 0.12);
+    margin-bottom: 35px;
+}
+
+/* ===========================================================
+   RESPONSIVE TABLE WRAPPERS
+   =========================================================== */
+
+/* This wrapper enables horizontal scroll */
+.responsive-table-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* Container for admin tables */
+.admin-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* ===========================================================
+   TABLE STYLING
+   =========================================================== */
+
+.admin-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.admin-table th {
+    background: #26262c;
+    color: #e6c465;
+    padding: 12px;
+    border-bottom: 1px solid #b89441;
+    letter-spacing: 1px;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.admin-table td {
+    background: #141418;
+    padding: 10px;
+    border-bottom: 1px solid #3a3a40;
+    color: #ddd;
+    white-space: nowrap;
+}
+
+.admin-table tr:hover td {
+    background: #1e1e24;
+}
+
+/* ===========================================================
+   MEDIA PAGE — RESPONSIVE FIXES
+   =========================================================== */
+
+.manage-media-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+/* Image sizing */
+.manage-media-table img {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Inputs scale properly */
+.manage-media-table input[type="text"],
+.manage-media-table input[type="date"],
+.manage-media-table select,
+.manage-media-table input[type="file"] {
+    width: 100%;
+    max-width: 200px;
+    min-width: 100px;
+    box-sizing: border-box;
+}
+
+/* Ensure cells shrink properly */
+.manage-media-table th,
+.manage-media-table td {
+    white-space: nowrap;
+}
+
+/* ===========================================================
+   ACTION BUTTONS
+   =========================================================== */
+
+.table-action-btn {
+    padding: 6px 12px;
+    margin-right: 6px;
+    background: linear-gradient(to right, #d6b354, #f6e27a);
+    border: 1px solid #b89441;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.table-action-btn:hover {
+    background: linear-gradient(to right, #f4d98e, #fceeb2);
+}
+
+/* Delete button */
+.table-delete-btn {
+    background: #8a2020;
+    border: 1px solid #b84242;
+    color: #ffdcdc;
+}
+
+.table-delete-btn:hover {
+    background: #a22d2d;
+}
+
+/* ===========================================================
+   FORM FIELDS (Add Media, Edit Panels)
+   =========================================================== */
+
+.admin-form label {
+    display: block;
+    margin: 12px 0 5px;
+    color: #d9caa2;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    width: 100%;
+    background: #101014;
+    border: 1px solid #3a3a40;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* Submit button */
+.admin-submit {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #b89441;
+    background: linear-gradient(to right, #d6b354, #f6e27a);
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.admin-submit:hover {
+    background: linear-gradient(to right, #f1d47a, #f8eaa3);
+}
+
+/* ===========================================================
+   STATUS BADGES
+   =========================================================== */
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.badge-pending { background: #f6e27a; }
+.badge-approved { background: #7df67a; }
+.badge-rejected { background: #f67a7a; }
+
+/* ===========================================================
+   FOOTER
+   =========================================================== */
+
+.admin-footer {
+    margin-top: 50px;
+    background: #2a2a2f;
+    padding: 18px 0;
+    text-align: center;
+    color: #b3a57f;
+    border-top: 1px solid #b89441;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* ===========================================================
+   ADMIN LOGIN PAGE ELEMENTS
+   =========================================================== */
+
+.admin-login-body {
+    background: radial-gradient(circle at top, #1b1b22, #0b0b0d);
+    color: #fff;
+}
+
+.admin-login-header-bar {
+    width: 100%;
+    background: #1f1f25;
+    border-bottom: 1px solid #b89441;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.admin-login-header-title {
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: #e6c465;
+    font-weight: bold;
+}
+
+.admin-login-wrapper {
+    width: 450px;
+    margin: 50px auto 0;
+    padding: 20px;
+}
+
+.admin-login-box {
+    background: #1c1c21;
+    border: 1px solid #b89441;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px rgba(255, 215, 0, 0.15);
+}
+
+/* Input styling */
+.admin-label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #d9caa2;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.admin-input {
+    width: 100%;
+    background: #101014;
+    border: 1px solid #3a3a40;
+    color: white;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* Login submit */
+.admin-submit-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #b89441;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(to right, #d6b354, #f6e27a);
+    transition: 0.2s;
+}
+
+.admin-submit-btn:hover {
+    background: linear-gradient(to right, #f1d47a, #f8eaa3);
+}
+
+.admin-return-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.admin-return-link a {
+    color: #d6b354;
+    text-decoration: none;
+}
+
+.admin-return-link a:hover {
+    text-decoration: underline;
+}
+
+.admin-login-footer {
+    margin-top: 80px;
+    background: #2a2a2f;
+    padding: 15px 0;
+    text-align: center;
+    color: #b3a57f;
+    border-top: 1px solid #b89441;
+    width: 100%;
+}

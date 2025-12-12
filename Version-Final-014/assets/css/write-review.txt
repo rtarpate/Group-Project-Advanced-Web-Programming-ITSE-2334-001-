@@ -1,0 +1,63 @@
+/* Write Review Page Styling - Deco Theme */
+
+.form-page-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #f8f2e9;
+    border: 3px solid #000;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.review-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.review-form select,
+.review-form input,
+.review-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background: #fffdf8;
+    font-size: 1rem;
+}
+
+.review-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    display: block;
+    margin: 25px auto 10px;
+    padding: 10px 25px;
+    background: linear-gradient(to right, #d4af37, #f7e8a4);
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #f7e8a4, #d4af37);
+}
+
+.status-msg {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}

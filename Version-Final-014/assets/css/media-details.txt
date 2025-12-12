@@ -1,0 +1,169 @@
+/* ==========================================================
+   MEDIA DETAILS PAGE — NEW DEDICATED STYLE SHEET
+   Matches Art-Deco theme used across site
+   ========================================================== */
+
+/* Page wrapper */
+.media-details-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px 50px;
+    background-color: #fffdf6;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.10);
+    border: 2px solid #c9a86a;
+}
+
+/* Title under header */
+.media-details-page .page-title {
+    font-family: 'Copperplate', 'Futura', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    color: #2b2b2b;
+    margin-bottom: 25px;
+    letter-spacing: 1.2px;
+}
+
+/* =========================================
+   FLEX LAYOUT — IMAGE (LEFT) | DETAILS (RIGHT)
+   ========================================= */
+.media-details-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+/* IMAGE COLUMN */
+.media-details-image img {
+    width: 340px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+
+    /* Gold gradient border like reviews grid */
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #d4b556, #f4d47c, #fff2b2) 1;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* =========================================
+   INFORMATION COLUMN
+   ========================================= */
+.media-details-main {
+    flex: 1;
+    min-width: 320px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.media-details-main p {
+    margin: 10px 0;
+    line-height: 1.45;
+}
+
+.media-details-main .detail-label {
+    font-weight: bold;
+    color: #2b2b2b;
+}
+
+/* Decorated highlighted rating box */
+.media-details-rating-box {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: #fff7e8;
+    border-left: 5px solid #f9d77e;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Button (styled same as Reviews) */
+.media-details-main .btn-details {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: 1px solid #f4d47c;
+    border-radius: 999px;
+    background: transparent;
+    color: #f4d47c;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.8px;
+    transition: 0.25s ease;
+}
+
+.media-details-main .btn-details:hover {
+    background-color: #f4d47c;
+    color: #111;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   USER REVIEWS SECTION
+   ========================================= */
+.media-details-reviews {
+    margin-top: 40px;
+}
+
+.media-details-reviews h2 {
+    font-family: 'Copperplate', 'Futura', sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2b2b2b;
+    letter-spacing: 1px;
+}
+
+.user-review-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual review card */
+.user-review-item {
+    background-color: #000;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #d4b556, #f4d47c, #fff2b2) 1;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    color: #f5f5f5;
+}
+
+.user-review-item p {
+    margin: 8px 0;
+    line-height: 1.45;
+}
+
+.user-review-item small {
+    color: #f4d47c;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .media-details-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .media-details-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media-details-main {
+        text-align: center;
+    }
+}

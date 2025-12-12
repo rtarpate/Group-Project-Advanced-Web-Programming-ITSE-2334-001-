@@ -1,0 +1,176 @@
+/* ===========================================================
+   MANAGE MEDIA — INLINE EDITABLE ADMIN TABLE (FINAL)
+   =========================================================== */
+
+.admin-container {
+    width: 95%;
+    max-width: 1600px;
+    margin: 30px auto;
+}
+
+/* Wrapper to allow horizontal scroll if needed */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+/* -----------------------------------------------------------
+   TABLE BASE
+----------------------------------------------------------- */
+
+.admin-table {
+    width: 100%;
+    min-width: 1200px;
+    border-collapse: collapse;
+    background: #141418;
+}
+
+.admin-table th {
+    background: #26262c;
+    color: #e6c465;
+    padding: 12px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #b89441;
+    white-space: nowrap;
+}
+
+.admin-table td {
+    padding: 10px;
+    border-bottom: 1px solid #3a3a40;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.admin-table tr:hover td {
+    background: #1e1e24;
+}
+
+/* -----------------------------------------------------------
+   INPUTS & SELECTS
+----------------------------------------------------------- */
+
+.admin-table input[type="text"],
+.admin-table input[type="date"],
+.admin-table select {
+    width: 100%;
+    max-width: 180px;
+    min-width: 110px;
+    background: #101014;
+    border: 1px solid #3a3a40;
+    color: #ffffff;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.admin-table select {
+    cursor: pointer;
+}
+
+.admin-table input:focus,
+.admin-table select:focus {
+    outline: none;
+    border-color: #e6c465;
+    box-shadow: 0 0 4px rgba(230, 196, 101, 0.4);
+}
+
+/* -----------------------------------------------------------
+   ACTION BUTTONS
+----------------------------------------------------------- */
+
+.actions {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.btn-save {
+    padding: 6px 12px;
+    background: linear-gradient(to right, #d6b354, #f6e27a);
+    border: 1px solid #b89441;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-save:hover {
+    background: linear-gradient(to right, #f1d47a, #f8eaa3);
+}
+
+.btn-delete {
+    padding: 6px 12px;
+    background: #8a2020;
+    border: 1px solid #b84242;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #ffdcdc;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-delete:hover {
+    background: #a22d2d;
+}
+
+/* -----------------------------------------------------------
+   MOBILE RESPONSIVE (CARD VIEW)
+----------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .admin-table {
+        min-width: unset;
+    }
+
+    .admin-table thead {
+        display: none;
+    }
+
+    .admin-table tr {
+        display: block;
+        background: #1c1c21;
+        border: 1px solid #b89441;
+        border-radius: 12px;
+        margin-bottom: 18px;
+        padding: 14px;
+    }
+
+    .admin-table td {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        white-space: normal;
+        border: none;
+        padding: 6px 0;
+    }
+
+    .admin-table td::before {
+        content: attr(data-label);
+        font-size: 13px;
+        font-weight: bold;
+        color: #e6c465;
+        margin-bottom: 4px;
+    }
+
+    .admin-table input,
+    .admin-table select {
+        max-width: 100%;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-save,
+    .btn-delete {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
